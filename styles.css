@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Aeonik-Trial";
+  src: url(./font/AeonikTRIAL-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Aeonik-Trial";
+  src: url(./resources/font/AeonikTRIAL-Light.otf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Aeonik-Trial";
+  src: url(./font/AeonikTRIAL-Bold.otf);
+  font-weight: bold;
+}
+
+@layer utilities {
+  .font-aeonik {
+    font-family: "Aeonik-Trial", sans-serif;
+  }
+}
+
+html {
+  font-family: "Aeonik-Trial";
+  color: #7b7b7b;
+}
+
+@theme {
+  --color-primary: #222222;
+  --color-secondary: #7b7b7b;
+  --color-tertiary: #f8f8f8;
+  --color-t200: #f3f3f3;
+  --color-t400: #f8f8f8;
+}
