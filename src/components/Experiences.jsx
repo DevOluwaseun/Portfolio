@@ -4,11 +4,11 @@ import Label from './label';
 
 function Experiences() {
   return (
-    <div className="bg-tertiary font-aeonik flex min-h-screen flex-col items-center pt-20 font-normal">
-      <div className="text-primary flex w-30 justify-center rounded-4xl bg-white">
+    <div className="bg-tertiary font-aeonik flex min-h-screen flex-col items-center justify-center pt-20 font-light">
+      <div className="text-primary flex w-30 justify-center rounded-4xl bg-white font-normal">
         <p> &#9679; Experiences</p>
       </div>
-      <h1 className="text-primary font-aeonik font-regular mb-5 pt-5 text-4xl">
+      <h1 className="text-primary font-aeonik mb-5 pt-5 text-4xl font-normal">
         What I Can Do
       </h1>
       <Skills

@@ -1,8 +1,8 @@
 import About from './components/About';
 import Header from './components/Header';
 import Experiences from './components/Experiences';
-import Portfolio from './components/Portfolio';
 import Tools from './components/Tools';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <About />
       <Tools />
       <Experiences />
-      <Portfolio />
+      <Projects />
     </div>
   );
 }

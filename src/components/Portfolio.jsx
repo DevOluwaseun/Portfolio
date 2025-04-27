@@ -1,8 +1,6 @@
-import Contact from './Contact';
-
 function Portfolio() {
   return (
-    <div className="flex flex-col items-center bg-[#e3e3e3] pt-20">
+    <div className="flex flex-col items-center">
       <div className="font-aeonik text-primary flex w-auto justify-center rounded-4xl bg-white px-3 font-normal">
         <p> &#9679; Portfolio</p>
       </div>
@@ -29,7 +27,7 @@ function Portfolio() {
             </div>
           </div>
           <p className="font-aeonik text-primary pt-3 font-normal">
-            Career Catalyst Website
+            Word Scramble
           </p>
         </div>
 
@@ -52,7 +50,7 @@ function Portfolio() {
             </div>
           </div>
           <p className="font-aeonik text-primary pt-3 font-normal">
-            Career Catalyst Website
+            QR Code generator
           </p>
         </div>
 
@@ -79,7 +77,6 @@ function Portfolio() {
           </p>
         </div>
       </div>
-      <Contact />
     </div>
   );
 }
