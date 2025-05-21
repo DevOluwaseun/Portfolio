@@ -2,9 +2,9 @@ import Nav from './nav';
 
 function Header() {
   return (
-    <div className="bg-tertiary font-aeonik relative flex max-h-screen flex-col font-normal">
+    <div className="bg-tertiary font-aeonik relative flex flex-col font-normal lg:h-screen">
       <Nav />
-      <div className="absolute top-1/2 left-5 flex -translate-y-1/2 flex-col items-center px-2">
+      <div className="absolute top-1/2 left-2 flex -translate-y-1/2 flex-col items-center md:left-10">
         <svg width="5" height="100%" xmlns="http://www.w3.org/2000/svg">
           <line
             x1="50%"
@@ -37,25 +37,24 @@ function Header() {
       </div>
 
       <div className="relative flex w-full flex-1 items-center justify-center overflow-hidden">
-        <div className="flex h-full w-full items-center justify-center">
-          <div className="relative ml-22 flex flex-col gap-2 md:ml-35 xl:ml-42">
-            <h1 className="font-aeonik text-primary flex text-[7rem] leading-[0.8] font-[300] md:text-[10rem] xl:text-[16rem] 2xl:text-[20rem]">
+        <div className="flex h-full items-center justify-center pl-40 lg:w-[90%]">
+          <div className="relative left-[2rem] flex flex-col gap-2 md:left-[7rem] md:ml-[3rem] lg:left-[9rem] lg:ml-[2rem]">
+            <h1 className="font-aeonik text-primary flex text-[6rem] leading-[0.8] font-light md:text-[8rem] lg:text-[12rem]">
               Hello
             </h1>
-            <h1 className="font-aeonik px-4 text-sm font-normal md:text-xl">
+            <h1 className="font-aeonik text-primary px-4 text-center text-[10px] font-normal whitespace-nowrap md:text-xl md:text-[15px]">
               - It's Oluwaseun a Software Engineer
             </h1>
           </div>
-          <div className="h-auto max-h-[90vh] max-w-[70vw] object-contain">
-            <img
-              className="h-full max-h-[90vh] w-full object-contain"
-              src="resources/images/profile4.png"
-              alt=""
-            />
-          </div>
+
+          <img
+            className="bottom-0 max-h-[100vh] w-full object-contain"
+            src="resources/images/profile4.png"
+            alt=""
+          />
         </div>
       </div>
-      <p className="absolute bottom-10 left-[25%] z-10 flex animate-bounce">
+      <p className="absolute bottom-10 left-[25%] z-10 hidden animate-bounce md:flex">
         Scroll down
         <svg
           xmlns="http://www.w3.org/2000/svg"

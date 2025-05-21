@@ -1,17 +1,24 @@
-import Label from "./label";
+import { useState } from 'react';
 
-function Skills({ skill, description, children }) {
+function Skills({ img, skill, description }) {
+  const [showDescription, setShowDescription] = useState(false);
+
   return (
     <>
-      <div className="grid gap-6 items-start mx-10 my-3 grid-cols-12">
-        <div className="col-span-3">
-          <h1 className=" text-2xl text-primary ">{skill}</h1>
-        </div>
-
-        <div className="col-span-4">
-          <p>{description}</p>
-        </div>
-        <div className="flex col-span-5">{children}</div>
+      <div
+        onMouseEnter={() => setShowDescription(true)}
+        onMouseLeave={() => setShowDescription(false)}
+        className="text-primary font-aeonik border-secondary mt-10 flex h-[19rem] w-[20rem] flex-col items-center justify-center gap-2 rounded-sm border-b-4 bg-white p-4 text-2xl font-normal shadow-xl"
+      >
+        <img
+          className="h-[5rem] w-auto"
+          src={`../resources/images/${img}`}
+          alt=""
+        />
+        <h1 className="text-center text-xl">{skill}</h1>
+        {showDescription && (
+          <p className="text-center text-sm">{description}</p>
+        )}
       </div>
     </>
   );

@@ -1,17 +1,86 @@
+import ProjectIcons from './ProjectIcons';
+
 function Portfolio() {
+  const tools = {
+    smartPortfolio: [
+      'React',
+      'Tailwind',
+      'Node.js',
+      'Express',
+      'OpenAI',
+      'GitHub',
+      'MongoDB',
+      'Framer Motion',
+    ],
+    gitHubReadme: [
+      'Next.js',
+      'Tailwind CSS',
+      'OpenAI API',
+      'GitHub OAuth',
+      'Javascript',
+    ],
+    customerSupport: [
+      'React',
+      'Node.js',
+      'Express',
+      'Socket.io',
+      'MongoDB',
+      'Tailwind',
+      'OpenAI API',
+      'JWT Auth',
+    ],
+    DevOps: [
+      'React',
+      'Node.js',
+      'GitHub Actions API',
+      'Docker',
+      'Tailwind CSS',
+      'Vite',
+    ],
+  };
+
   return (
-    <div className="flex flex-col items-center">
+    <div className="font-aeonik flex w-full flex-col items-center">
       <div className="font-aeonik text-primary flex w-auto justify-center rounded-4xl bg-white px-3 font-normal">
         <p> &#9679; Portfolio</p>
       </div>
-      <h1 className="text-primary font-aeonik mb-5 py-5 text-4xl font-normal">
+      <h1 className="text-primary font-aeonik mb-10 py-5 text-4xl font-normal">
         Selected Projects
       </h1>
-      <div className="relative mx-10 flex justify-center gap-4">
-        <div className="flex h-auto w-full flex-col">
+      <div className="flex w-[80%] flex-row gap-10 rounded-4xl bg-white shadow-2xl">
+        <img
+          className="h-full w-[50%] rounded-4xl object-cover"
+          src="./resources/images/guessword.png"
+          alt=""
+        />
+        <div className="text-primary flex flex-col justify-center gap-3 p-7 font-normal">
+          <h1 className="font-aeonik my-2 text-2xl font-normal text-cyan-600">
+            SmartPortfolio Reviewer
+          </h1>
+          <p>
+            An intelligent portfolio evaluation tool that reviews GitHub
+            profiles and personal websites to offer personalized, actionable
+            feedback. Designed to help developers identify strengths and areas
+            for improvement based on modern hiring standards.
+          </p>
+          <ul className="list-disc pl-6 font-light">
+            <li>GitHub API integration for profile and repo analysis</li>
+            <li>AI-generated suggestions using OpenAI’s GPT models</li>
+            <li>Real-time UI/UX grading based on heuristics</li>
+            <li>Exportable PDF report for performance review</li>
+          </ul>
+          <div className="flex flex-wrap">
+            {tools.smartPortfolio?.map((tool, i) => (
+              <ProjectIcons key={i} icon={tool} />
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* <div className="relative mx-10 flex justify-center gap-4">
+        <div className="flex h-auto w-full flex-col rounded-sm shadow-xl">
           <div className="group relative flex h-full w-full flex-col">
             <img
-              className="h-full w-full rounded-xl object-cover"
+              className="h-full w-full rounded-sm object-cover"
               src="./resources/images/guessword.png"
               alt=""
             />
@@ -26,7 +95,7 @@ function Portfolio() {
               </svg>
             </div>
           </div>
-          <p className="font-aeonik text-primary pt-3 font-normal">
+          <p className="font-aeonik text-primary mt-3 ml-2 font-normal">
             Word Scramble
           </p>
         </div>
@@ -76,7 +145,7 @@ function Portfolio() {
             Career Catalyst Website
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
