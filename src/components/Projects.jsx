@@ -1,6 +1,6 @@
 import Portfolio from './Portfolio';
 import Contact from './Contact';
-import Blog from './blog';
+import Blog from './Blog';
 
 function Projects() {
   return (

@@ -6,7 +6,6 @@ function Icons({ icon }) {
         src={`./resources/images/${icon}.png`}
         alt={`${icon} icon`}
       />
-      <h1 className="font-aeonik pt-3 font-normal text-white">{icon}</h1>
     </div>
   );
 }

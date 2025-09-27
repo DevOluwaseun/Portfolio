@@ -30,7 +30,7 @@ body {
 }
 
 @theme {
-  --color-primary: #222222;
+  --color-primary: oklch(21% 0.034 264.665);
   --color-secondary: #7b7b7b;
   --color-tertiary: #f8f8f8;
   --color-t200: #f3f3f3;

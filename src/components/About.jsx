@@ -1,51 +1,101 @@
+import Tools from './Tools';
+
 function About() {
+  const highlights = [
+    { icon: '🎓', title: 'Education', desc: 'BSc Computer Science' },
+    { icon: '💼', title: 'Experience', desc: '2+ Years Learning' },
+    { icon: '🚀', title: 'Projects', desc: '10+ Completed' },
+    { icon: '🎯', title: 'Focus', desc: 'User-Centered Design' },
+  ];
+
   return (
-    <div className="font-aeonik relative h-screen bg-[#e3e3e3] py-20 font-normal">
-      <div className="flex h-full w-full items-center justify-center">
-        <img
-          className="absolute left-[-5%] mx-auto h-auto max-w-[800px] md:max-w-[800px]"
-          src="./resources/images/illustrator1.png"
-          alt=""
-        />
+    <section
+      className="font-aeonik relative min-h-screen bg-white font-normal"
+      id="about"
+    >
+      <div className="grid min-h-screen lg:grid-cols-2">
+        {/* Left Side - Dark */}
+        <div className="flex flex-col justify-center bg-gray-900 p-12 text-white">
+          <div className="max-w-lg">
+            <div className="mb-8">
+              <span className="text-sm font-medium tracking-wider text-blue-400 uppercase">
+                About Me
+              </span>
+              <h2 className="mt-4 mb-6 text-4xl font-light md:text-5xl">
+                Building Digital
+                <span className="block text-blue-400">Experiences</span>
+              </h2>
+            </div>
 
-        <div className="bg-tertiary z-0 flex h-auto w-xl flex-col items-center gap-3 px-10 py-[20%] text-center shadow-2xl md:rounded-3xl md:p-10">
-          <h1 className="font-aeonik text-primary text-xl font-normal">
-            ABOUT ME
-          </h1>
-          <p className="font-normal">
-            I’m Oluwaseun, a driven and passionate software engineer with a
-            clear goal: to land a role where I can contribute to building
-            innovative, user-focused solutions. With a background in web
-            development and experience across technologies like React,
-            JavaScript, and Git, I’m focused on continuously improving my skills
-            to stay ahead in the ever-evolving tech world.
-          </p>
+            <div className="space-y-6 leading-relaxed text-gray-300">
+              <p>
+                I'm Oluwaseun, a passionate software engineer focused on
+                creating innovative solutions that make a difference. My journey
+                in tech is driven by curiosity and the desire to solve
+                real-world problems.
+              </p>
 
-          <p className="font-normal">
-            Currently pursuing a BSc in Computer Science from the University of
-            London, I’m working on a portfolio of high-quality projects,
-            including AI-powered tools, real-time applications, and machine
-            learning systems.
-          </p>
+              <p>
+                Currently studying Computer Science at University of London
+                while building my expertise in modern web technologies and best
+                practices.
+              </p>
+            </div>
 
-          <p className="font-normal">
-            I’m not just passionate about writing code—I’m passionate about
-            using technology to solve real-world problems. With a focus on
-            learning, growth, and delivering exceptional results, I’m excited to
-            take the next step in my career and contribute to a forward-thinking
-            company.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-primary h-10 w-40 rounded-md text-white transition hover:bg-gray-800 md:w-48">
-              Download CV
-            </button>
-            <button className="text-primary h-10 w-40 rounded-md border bg-gray-300 transition hover:bg-gray-400 md:w-48">
-              Email
-            </button>
+            <div className="mt-12 flex gap-4">
+              <button className="rounded-lg bg-blue-600 px-8 py-3 text-white transition-colors hover:bg-blue-700">
+                View Resume
+              </button>
+              <button className="rounded-lg border border-gray-600 px-8 py-3 text-gray-300 transition-colors hover:border-gray-400 hover:text-white">
+                Contact Me
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Light */}
+        <div className="flex flex-col justify-center bg-gray-50 p-10">
+          <div className="mx-auto max-w-lg">
+            {/* Profile Image */}
+            <div className="mb-12 text-center">
+              <img
+                className="mx-auto h-48 w-48 rounded-full border-8 border-white object-cover shadow-xl"
+                src="./resources/images/picture-1.jpeg"
+                alt="Oluwaseun"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Highlights Grid */}
+            <div className="grid grid-cols-2 gap-6">
+              {highlights.map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
+                >
+                  <div className="mb-3 text-2xl">{item.icon}</div>
+                  <h3 className="mb-1 font-semibold text-gray-900">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Quote */}
+            <div className="mt-12 rounded-2xl bg-white p-6 shadow-md">
+              <blockquote className="text-center text-gray-700 italic">
+                "I'm passionate about using technology to solve real-world
+                problems and create meaningful user experiences."
+              </blockquote>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="w-full">
+        <Tools />
+      </div>
+    </section>
   );
 }
 
