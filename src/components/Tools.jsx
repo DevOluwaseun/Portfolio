@@ -1,45 +1,4 @@
-// import Icons from './icons';
-// function Tools() {
-//   const tools = [
-//     'Javascript',
-//     'React',
-//     'Python',
-//     'Next.js',
-//     'Node.js',
-//     'MongoDB',
-//     'Tailwind',
-//     'Bootstrap',
-//     'Express',
-//     'Git',
-//     'HTML5',
-//     'CSS3',
-//     'Redux',
-//     'Github',
-//     'JQuery',
-//   ];
-
-//   return (
-//     <div className="font-aeonik to-primary flex flex-col items-center bg-linear-to-bl from-blue-900 from-10% py-5 font-normal">
-//       <div className="text-primary flex w-20 justify-center rounded-4xl bg-white">
-//         <p>
-//           <span className="text-blue-600">●</span> Tools
-//         </p>
-//       </div>
-//       {/* <h1 className="font-aeonik pt-5 text-4xl font-normal text-white">
-//         What I Use
-//       </h1> */}
-//       <div className="mt-5 flex flex-wrap justify-center gap-2">
-//         {tools.map((tool, index) => {
-//           return <Icons key={index} icon={tool}></Icons>;
-//         })}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Tools;
-
-import Icons from './icons';
+import Icons from './Icons';
 
 function Tools() {
   const tools = [
