@@ -3,19 +3,26 @@ import BlogPost from './BlogPost';
 
 function Blog() {
   const [posts, setPosts] = useState([]);
+  // useEffect(() => {
+  //   try {
+  //     fetch('https://dev.to/api/articles?username=devoluwaseun')
+  //       .then((res) => res.json())
+  //       .then((data) => setPosts(data))
+  //       .catch((err) => console.error(err));
+  //   } catch (error) {
+  //     console.error(error);
+  //     return {
+  //       statusCode: 500,
+  //       body: JSON.stringify({ error: 'Failed to fetch posts' }),
+  //     };
+  //   }
+  // }, []);
+
   useEffect(() => {
-    try {
-      fetch('https://dev.to/api/articles?username=devoluwaseun')
-        .then((res) => res.json())
-        .then((data) => setPosts(data))
-        .catch((err) => console.error(err));
-    } catch (error) {
-      console.error(error);
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ error: 'Failed to fetch posts' }),
-      };
-    }
+    fetch('/.netlify/functions/fetchPosts')
+      .then((res) => res.json())
+      .then((data) => setPosts(data))
+      .catch((err) => console.error(err));
   }, []);
 
   return (
