@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Logo from './logo';
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
