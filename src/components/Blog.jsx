@@ -4,45 +4,19 @@ import BlogPost from './BlogPost';
 function Blog() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch('https://dev.to/api/articles?username=devoluwaseun')
-      .then((res) => res.json())
-      .then((data) => setPosts(data))
-      .catch((err) => console.error(err));
+    try {
+      fetch('https://dev.to/api/articles?username=devoluwaseun')
+        .then((res) => res.json())
+        .then((data) => setPosts(data))
+        .catch((err) => console.error(err));
+    } catch (error) {
+      console.error(error);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Failed to fetch posts' }),
+      };
+    }
   }, []);
-
-  // const blogPosts = [
-  //   {
-  //     id: 1,
-  //     topic: 'PROGRAMMING',
-  //     duration: 5,
-  //     title:
-  //       'From Curiosity to Career: My Early Steps into Software Engineering',
-  //     description:
-  //       'My journey into software development, the challenges I faced, and how I overcame them.',
-  //     image: './resources/images/life.jpg',
-  //     date: 'March 15, 2024',
-  //   },
-  //   {
-  //     id: 2,
-  //     topic: 'PROGRAMMING',
-  //     duration: 5,
-  //     title: 'Lessons I Learned From Teaching Myself Graphic Design',
-  //     description:
-  //       'Key insights and practical tips from my self-taught design journey.',
-  //     image: './resources/images/keyboard.jpg',
-  //     date: 'March 10, 2024',
-  //   },
-  //   {
-  //     id: 3,
-  //     topic: 'PROGRAMMING',
-  //     duration: 5,
-  //     title: 'Facing Rejection: How I Stayed Motivated to Learn Programming',
-  //     description:
-  //       'Overcoming setbacks and building resilience in the tech industry.',
-  //     image: './resources/images/programmer-1.png',
-  //     date: 'March 5, 2024',
-  //   },
-  // ];
 
   return (
     <section className="font-aeonik z-9 w-[80] bg-gray-50 py-20" id="blog">
