@@ -45,10 +45,8 @@ function Blog() {
   // ];
 
   return (
-    <section className="font-aeonik bg-gray-50 py-20" id="blog">
+    <section className="font-aeonik z-9 w-[80] bg-gray-50 py-20" id="blog">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-
         <div className="mb-16 text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 shadow-sm">
             <span className="text-blue-600">●</span>
@@ -64,8 +62,6 @@ function Blog() {
             journey in software development.
           </p>
         </div>
-
-        {/* Blog Grid */}
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (

@@ -6,22 +6,22 @@ function Portfolio() {
   const toggleDiv = () => setIsVisible(!isVisible);
 
   return (
-    <div className="font-aeonik flex w-full flex-col items-center">
+    <div className="font-aeonik z-10 flex w-full flex-col items-center rounded-4xl pt-20">
       <div className="font-aeonik text-primary flex w-auto justify-center rounded-4xl bg-white px-3 font-normal">
         <p>
           <span className="text-blue-600">●</span> Portfolio
         </p>
       </div>
       <h1 className="text-primary font-aeonik mb-10 py-5 text-4xl font-normal">
-        Selected Projects
+        Projects
       </h1>
-      <div className="bg-primary flex h-auto w-[80%] flex-col gap-10 rounded-4xl shadow-2xl md:flex-row">
+      <div className="bg-primary flex h-auto flex-col gap-10 rounded-tl-4xl rounded-tr-4xl shadow-2xl md:w-[80%] md:flex-row md:rounded-4xl">
         <img
           className="h-auto w-full rounded-4xl object-cover md:w-[50%]"
           src="./resources/images/pexels-3.jpg"
           alt=""
         />
-        <div className="flex flex-col justify-center gap-4 rounded-2xl bg-slate-900 p-7 font-normal text-white shadow-lg">
+        <div className="flex flex-col justify-center gap-4 rounded-4xl bg-slate-900 p-7 font-normal text-white shadow-lg">
           <h1 className="font-aeonik my-2 text-2xl font-semibold text-blue-400">
             Helpr{' '}
             <span className="font-light text-gray-400">[coming soon]</span>

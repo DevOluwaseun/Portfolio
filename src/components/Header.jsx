@@ -3,45 +3,35 @@ import Nav from './Nav';
 function Header() {
   const socialLinks = [
     {
-      icons: './resources/images/github.png',
+      icons: '/resources/images/github-wh.png',
       alt: 'GitHub',
       url: 'https://github.com/DevOluwaseun',
     },
     {
-      icons: './resources/images/instagram.png',
+      icons: '/resources/images/instagram.png',
       alt: 'Instagram',
       url: 'https://instagram.com/DevOluwaseun',
     },
     {
-      icons: './resources/images/linkedin.png',
+      icons: '/resources/images/linkedin.png',
       alt: 'LinkedIn',
       url: 'https://linkedin.com/in/devoluwaseun',
     },
     {
-      icons: './resources/images/email-black.png',
+      icons: '/resources/images/email-black.png',
       alt: 'Email',
       url: 'mailto:devoluwaseun@email.com',
     },
   ];
 
-  const handleSocialClick = (url) => {
-    if (!url) {
-      console.error('Invalid URL');
-      return;
-    }
-
-    if (url.startsWith('mailto:')) {
-      return;
-    }
-
-    window.open(url, '_blank');
-  };
-
   return (
-    <header className="bg-tertiary font-aeonik relative flex flex-col font-normal lg:h-screen">
+    <header
+      id="home"
+      className="bg-tertiary font-aeonik relative flex flex-col font-normal lg:h-screen"
+    >
       <Nav />
 
-      <div className="absolute top-1/2 left-2 flex -translate-y-1/2 flex-col items-center md:left-10">
+      <div className="absolute top-1/2 left-2 z-50 flex -translate-y-1/2 flex-col items-center md:left-10">
         <svg width="5" height="100%" xmlns="http://www.w3.org/2000/svg">
           <line
             x1="50%"
@@ -58,13 +48,12 @@ function Header() {
             <a
               key={i}
               href={link.url}
-              onClick={() => handleSocialClick(link.url)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group cursor-pointer transition-all duration-300"
+              className="flex h-10 w-10 items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 hover:opacity-80 hover:brightness-110 hover:drop-shadow-lg"
             >
               <img
-                className="w-6 transition-transform duration-300 group-hover:scale-110 group-hover:opacity-80 sm:w-5 md:w-6 lg:w-7"
+                className="w-6 sm:w-5 md:w-6 lg:w-7"
                 src={link.icons}
                 alt={link.alt}
                 loading="lazy"
@@ -77,10 +66,10 @@ function Header() {
       <div className="relative flex w-full flex-1 items-center justify-center overflow-hidden">
         <div className="flex h-full items-center justify-center pl-40 lg:w-[90%]">
           <div className="relative left-[2rem] flex flex-col gap-2 md:left-[7rem] md:ml-[3rem] lg:left-[9rem] lg:ml-[2rem]">
-            <h1 className="font-aeonik text-primary flex text-[6rem] leading-[0.8] font-light md:text-[8rem] lg:text-[15rem]">
+            <h1 className="font-aeonik text-primary flex pl-10 text-[6rem] leading-[0.8] font-light md:text-[10rem] lg:text-[18rem]">
               Hello
             </h1>
-            <p className="font-aeonik text-primary px-4 text-center text-[10px] font-normal whitespace-nowrap md:text-xl md:text-[15px]">
+            <p className="font-aeonik text-primary px-4 text-right text-[10px] font-normal whitespace-nowrap md:text-xl md:text-[15px]">
               - I'm Oluwaseun a Software Engineer
             </p>
           </div>

@@ -1,5 +1,3 @@
-import Tools from './Tools';
-
 function About() {
   const highlights = [
     { icon: '🎓', title: 'Education', desc: 'BSc Computer Science' },
@@ -13,6 +11,26 @@ function About() {
       className="font-aeonik relative min-h-screen bg-white font-normal"
       id="about"
     >
+      <div className="absolute bottom-0 left-0 z-0 w-full overflow-hidden">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="height[150px] width-[calc(100% + 1.3px)] relative block rotate-180"
+        >
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor=" #1e40af" />
+              <stop offset="100%" stopColor="#1e3a8a" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M649.97 0L550.03 0 599.91 54.12 649.97 0z"
+            fill="url(#gradient)"
+          />
+        </svg>
+      </div>
       <div className="grid min-h-screen lg:grid-cols-2">
         {/* Left Side - Dark */}
         <div className="flex flex-col justify-center bg-gray-900 p-12 text-white">
@@ -92,11 +110,9 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="w-full">
-        <Tools />
-      </div>
     </section>
   );
 }
 
+//  className="height[150px] width-[calc(100% + 1.3px)] relative block rotate-180"
 export default About;

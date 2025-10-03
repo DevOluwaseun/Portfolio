@@ -17,7 +17,7 @@ const skillsObj = [
     skill: 'Database & Data Handling',
     description:
       'Modeling, querying, and optimizing data with MongoDB (Mongoose) and SQL databases, plus using NumPy and Pandas for efficient data manipulation and analysis.',
-    img: 'Database-management.png',
+    img: 'database-management.png',
   },
   {
     skill: 'AI & Automation',
@@ -29,13 +29,13 @@ const skillsObj = [
     skill: 'DevOps & Deployment',
     description:
       'Containerizing applications with Docker, orchestrating CI/CD pipelines via GitHub Actions, and deploying to modern platforms (Vercel, Netlify, AWS) for reliable, automated releases.',
-    img: 'DevOps.png',
+    img: 'devops.png',
   },
   {
     skill: 'Cloud Computing & Infrastructure',
     description:
       'Provisioning and managing cloud services on AWS, or Azure—leveraging serverless functions, virtual machines, storage solutions, and Infrastructure-as-Code (Terraform) for resilient, scalable systems.',
-    img: 'Cloud-server.png',
+    img: 'cloud-server.png',
   },
 ];
 
@@ -68,15 +68,39 @@ const skillsObj = [
 function Experiences() {
   return (
     <section
-      className="font-aeonik bg-gradient-to-b from-gray-50 to-white py-20"
       id="experiences"
+      className="font-aeonik relative min-h-screen w-full bg-[#fefcff] py-20 lg:py-40"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+        radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%),
+        radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%)`,
+        }}
+      />
+
+      <div className="absolute bottom-0 left-0 z-0 w-full overflow-hidden">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="height[150px] width-[calc(100% + 1.3px)] relative block rotate-180"
+        >
+          <path
+            d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z"
+            fill="#e3e3e3"
+          />
+        </svg>
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16 text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 shadow-sm">
             <span className="text-blue-600">●</span>
-            <span className="font-medium text-gray-900">EXPERIENCES</span>
+            <span className="font-medium text-gray-900">Experiences</span>
           </div>
 
           <h2 className="mb-4 text-4xl font-light text-gray-900">

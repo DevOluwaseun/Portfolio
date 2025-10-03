@@ -27,6 +27,7 @@ body {
   font-family: 'Aeonik-Trial';
   color: #7b7b7b;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 @theme {

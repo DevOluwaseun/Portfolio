@@ -43,21 +43,22 @@ import Icons from './icons';
 
 function Tools() {
   const tools = [
-    'Javascript',
+    'JavaScript',
     'React',
     'Python',
-    'Next.js',
+    'next.js',
     'Node.js',
     'MongoDB',
     'Tailwind',
-    'Bootstrap',
-    'Express',
+
+    'express',
     'Git',
     'HTML5',
     'CSS3',
     'Redux',
-    'Github',
-    'JQuery',
+    'github',
+    'MySQL',
+    'C++',
   ];
 
   return (

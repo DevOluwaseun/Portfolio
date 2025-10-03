@@ -8,8 +8,10 @@ function Nav() {
   };
 
   return (
-    <div className="bg-tertiary font-aeonik z-1 flex items-center justify-between p-6 px-20 font-normal">
-      <Logo />
+    <div className="bg-tertiary font-aeonik z-1 flex w-full items-center justify-between p-6 px-20 font-normal">
+      <h1 href="home" className="font-aeonik text-primary font-bold">
+        DevOluwaseun
+      </h1>
 
       <div className="z-2 flex h-8 w-8 flex-col items-center justify-center md:hidden">
         <button onClick={toggleMenu}>
@@ -45,19 +47,35 @@ function Nav() {
                 />
               </svg>
             </h1>
-            <li className="text-primary">About Me</li>
-            <li className="text-primary">Services</li>
-            <li className="text-primary">Projects</li>
-            <li className="text-primary">Contact</li>
+            <li className="text-primary">
+              <a href="#about">About</a>
+            </li>
+            <li className="text-primary">
+              <a href="#experiences">Experiences</a>
+            </li>
+            <li className="text-primary">
+              <a href="#projects">Projects </a>
+            </li>
+            <li className="text-primary">
+              <a href="#contact">Contact </a>
+            </li>
           </ul>
         </div>
       )}
 
-      <ul className="hidden md:flex">
-        <li className="text-primary mx-4">About Me</li>
-        <li className="text-primary mx-4">Services</li>
-        <li className="text-primary mx-4">Projects</li>
-        <li className="text-primary mx-4">Contact</li>
+      <ul className="hidden space-x-8 md:flex">
+        <li className="text-primary">
+          <a href="#about">About</a>
+        </li>
+        <li className="text-primary">
+          <a href="#experiences">Experiences</a>
+        </li>
+        <li className="text-primary">
+          <a href="#projects">Projects </a>
+        </li>
+        <li className="text-primary">
+          <a href="#contact">Contact </a>
+        </li>
       </ul>
 
       <h1 className="hidden items-center underline md:flex">
