@@ -71,8 +71,8 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="font-aeonik bg-primary z-6 flex w-full items-center justify-between p-6 px-20 font-normal">
-        <ul className="flex space-x-1 md:space-x-6">
+      <div className="font-aeonik bg-primary z-6 flex w-full items-center p-6 font-normal lg:justify-between lg:px-20">
+        <ul className="flex space-x-3 md:space-x-6">
           <li className="text-white">
             <a href="#about">About</a>
           </li>
@@ -87,7 +87,7 @@ function Contact() {
           </li>
         </ul>
 
-        <h1 className="text-lg text-white md:text-4xl">
+        <h1 className="hidden text-lg text-white md:text-4xl lg:flex">
           devoluwaseun@gmail.com
         </h1>
       </div>

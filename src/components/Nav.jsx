@@ -7,7 +7,7 @@ function Nav() {
   };
 
   return (
-    <div className="bg-tertiary font-aeonik z-1 flex w-full items-center justify-between p-6 px-20 font-normal">
+    <div className="bg-tertiary font-aeonik z-15 flex w-full items-center justify-between p-6 px-20 font-normal">
       <h1 href="home" className="font-aeonik text-primary font-bold">
         DevOluwaseun
       </h1>
@@ -27,7 +27,7 @@ function Nav() {
       </div>
 
       {isOpen && (
-        <div className="bg-tertiary absolute top-0 right-0 flex h-full w-[30%] flex-col items-center justify-center gap-5 px-10 md:hidden">
+        <div className="bg-tertiary absolute top-0 right-0 flex h-full w-full flex-col items-center justify-center gap-5 px-10 md:hidden">
           <ul className="flex flex-col items-start space-y-6">
             <h1 className="flex items-center underline">
               Resume

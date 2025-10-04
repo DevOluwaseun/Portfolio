@@ -31,7 +31,7 @@ function Header() {
     >
       <Nav />
 
-      <div className="absolute top-1/2 left-2 z-50 flex -translate-y-1/2 flex-col items-center md:left-10">
+      <div className="absolute top-1/2 left-2 z-10 flex -translate-y-1/2 flex-col items-center md:left-10">
         <svg width="5" height="100%" xmlns="http://www.w3.org/2000/svg">
           <line
             x1="50%"
