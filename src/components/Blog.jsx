@@ -18,15 +18,34 @@ function Blog() {
   //   }
   // }, []);
 
+  // useEffect(() => {
+  //   fetch('/.netlify/functions/fetchPosts')
+  //     .then((res) => {
+  //       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+  //       return res.json();
+  //     })
+  //     .then((data) => setPosts(data))
+  //     .catch((err) => console.error('Error fetching posts:', err));
+  // }, []);
+
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     fetch('/.netlify/functions/fetchPosts')
-      .then((res) => res.json())
-      .then((data) => setPosts(data))
-      .catch((err) => console.error(err));
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        setPosts(data);
+      })
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
   }, []);
 
   return (
-    <section className="font-aeonik z-9 w-[80] bg-gray-50 py-20" id="blog">
+    <section className="font-aeonik z-9 bg-gray-50 py-20" id="blog">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 shadow-sm">
