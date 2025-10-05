@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import { useState } from 'react';
 
 function Portfolio() {
@@ -6,15 +8,27 @@ function Portfolio() {
   const toggleDiv = () => setIsVisible(!isVisible);
 
   return (
-    <div className="font-aeonik z-10 flex w-full flex-col items-center rounded-4xl pt-20">
+    <motion.div
+      className="font-aeonik z-10 flex w-full flex-col items-center rounded-4xl pt-20"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2, duration: 0.6 }}
+      viewport={{ once: true }}
+    >
       <div className="font-aeonik text-primary flex w-auto justify-center rounded-4xl bg-white px-3 font-normal">
         <p>
           <span className="text-blue-600">●</span> Portfolio
         </p>
       </div>
-      <h1 className="text-primary font-aeonik mb-10 py-5 text-4xl font-normal">
-        Projects
-      </h1>
+      <div className="mb-16 text-center">
+        <h1 className="text-primary font-aeonik py-5 text-4xl font-light">
+          Projects
+        </h1>
+        <p className="mx-auto max-w-2xl text-gray-600">
+          A collection of projects that reflect my growth, curiosity, and
+          passion for meaningful tech solutions.
+        </p>
+      </div>
       <div className="bg-primary flex h-auto flex-col gap-10 rounded-tl-4xl rounded-tr-4xl shadow-2xl md:w-[80%] md:flex-row md:rounded-4xl">
         <img
           className="h-auto w-full rounded-4xl object-cover md:w-[50%]"
@@ -98,7 +112,7 @@ function Portfolio() {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

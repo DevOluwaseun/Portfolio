@@ -1,7 +1,13 @@
+import { motion } from 'framer-motion';
+
 function Skills({ description, img, skill, index }) {
   return (
-    <div
+    <motion.div
       className="group border-primary rounded-xl border-b-4 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2, duration: 0.6 }}
+      viewport={{ once: true }}
       style={{
         animationDelay: `${index * 100}ms`,
       }}
@@ -24,7 +30,7 @@ function Skills({ description, img, skill, index }) {
           <p className="text-sm leading-relaxed text-gray-600">{description}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 export default Skills;

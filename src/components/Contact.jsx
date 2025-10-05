@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion';
+
 function Contact() {
   const socialLinks = [
     {
-      icons: '/resources/images/github.png',
+      icons: '/resources/images/github-wh.png',
       alt: 'GitHub',
       url: 'https://github.com/DevOluwaseun',
     },
@@ -14,11 +16,6 @@ function Contact() {
       icons: '/resources/images/linkedin.png',
       alt: 'LinkedIn',
       url: 'https://linkedin.com/in/devoluwaseun',
-    },
-    {
-      icons: '/resources/images/email-black.png',
-      alt: 'Email',
-      url: 'mailto:devoluwaseun@email.com',
     },
   ];
 
@@ -36,7 +33,13 @@ function Contact() {
         id="contact"
         className="font-aeonik text-primary z-7 flex w-full flex-col items-center justify-center bg-[#d5d5d5] p-10 align-middle font-light md:mt-20 md:p-30"
       >
-        <div className="z-10 flex flex-col items-center gap-4 text-center">
+        <motion.div
+          className="z-10 flex flex-col items-center gap-4 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h1 className="text-primary text-5xl">How to Reach Me</h1>
           <p className="text-primary md:w-xl">
             I’m always open to discussing new projects, collaborations, or
@@ -69,7 +72,7 @@ function Contact() {
               </a>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="font-aeonik bg-primary z-6 flex w-full items-center p-6 font-normal lg:justify-between lg:px-20">
         <ul className="flex space-x-3 md:space-x-6">

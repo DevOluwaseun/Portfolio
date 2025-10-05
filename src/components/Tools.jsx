@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import Icons from './Icons';
 
 function Tools() {
@@ -27,7 +29,7 @@ function Tools() {
           <span className="text-blue-600">●</span> Tools
         </p>
       </div>
-      <h1 className="font-aeonik py-7 text-4xl font-normal text-white">
+      <h1 className="font-aeonik py-7 text-4xl font-light text-white">
         What I Use
       </h1>
 
@@ -35,9 +37,13 @@ function Tools() {
       <div className="w-full max-w-5xl">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {tools.map((tool, index) => (
-            <div
+            <motion.div
               key={index}
               className="group flex flex-col items-center justify-center rounded-xl bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-blue-500/10"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
             >
               <div className="transform cursor-pointer transition-transform duration-300 group-hover:scale-150">
                 <Icons icon={tool} />
@@ -45,7 +51,7 @@ function Tools() {
               <span className="mt-3 text-sm text-white/60 group-hover:text-white">
                 {tool}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -20,14 +20,14 @@ function Header() {
     {
       icons: '/resources/images/email-black.png',
       alt: 'Email',
-      url: 'mailto:devoluwaseun@email.com',
+      url: 'mailto:devoluwaseun@gmail.com?subject=Hello%20Oluwaseun',
     },
   ];
 
   return (
     <header
       id="home"
-      className="bg-tertiary font-aeonik relative flex flex-col font-normal lg:h-screen"
+      className="bg-tertiary font-aeonik relative flex snap-start flex-col font-normal lg:h-screen"
     >
       <Nav />
 

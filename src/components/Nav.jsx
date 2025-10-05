@@ -63,22 +63,28 @@ function Nav() {
       )}
 
       <ul className="hidden space-x-8 md:flex">
-        <li className="text-primary">
+        <li className="text-primary decoration-primary decoration-2 underline-offset-4 transition-all duration-300 hover:underline">
           <a href="#about">About</a>
         </li>
-        <li className="text-primary">
+        <li className="text-primary decoration-primary decoration-2 underline-offset-4 transition-all duration-300 hover:underline">
           <a href="#experiences">Experiences</a>
         </li>
-        <li className="text-primary">
+        <li className="text-primary decoration-primary decoration-2 underline-offset-4 transition-all duration-300 hover:underline">
           <a href="#projects">Projects </a>
         </li>
-        <li className="text-primary">
+        <li className="text-primary decoration-primary decoration-2 underline-offset-4 transition-all duration-300 hover:underline">
           <a href="#contact">Contact </a>
         </li>
       </ul>
 
-      <h1 className="hidden items-center underline md:flex">
-        Resume
+      <h1 className="hover:text-primary hidden cursor-pointer items-center underline md:flex">
+        <a
+          href="/resources/pdf/oluwaseun_atanda_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

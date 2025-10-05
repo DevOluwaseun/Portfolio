@@ -1,31 +1,16 @@
-// function BlogPost({ topic, duration, title, image }) {
-//   return (
-//     <div className="flex h-100 w-full flex-col rounded-xl bg-white shadow-lg">
-//       <img
-//         className="h-full w-full rounded-xl object-cover"
-//         src={image}
-//         alt=""
-//       />
-//       <div className="font-aeonik text-primary flex flex-col p-5 font-light">
-//         <div className="flex gap-3">
-//           <div className="font-aeonik bg-primary flex items-center rounded-2xl font-normal text-white">
-//             <p className="mx-1.5 text-xs">{topic}</p>
-//           </div>
-//           <p className="">{duration} mins read</p>
-//         </div>
-//         <p className="pt-2">{title}</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default BlogPost;
+import { motion } from 'framer-motion';
 
 import { format } from 'date-fns';
 
 function BlogPost({ duration, title, description, image, date, url }) {
   return (
-    <article className="font-aeonik overflow-hidden rounded-xl bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
+    <motion.article
+      className="font-aeonik overflow-hidden rounded-xl bg-white shadow-md transition-shadow duration-300 hover:shadow-xl"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2, duration: 0.6 }}
+      viewport={{ once: true }}
+    >
       <div className="relative">
         <img
           src={image}
@@ -62,7 +47,7 @@ function BlogPost({ duration, title, description, image, date, url }) {
           </a>
         </button>
       </div>
-    </article>
+    </motion.article>
   );
 }
 

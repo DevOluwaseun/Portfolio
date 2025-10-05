@@ -6,7 +6,7 @@ import Projects from './components/Projects';
 
 function App() {
   return (
-    <div>
+    <div className="h-screen snap-y overflow-y-scroll scroll-smooth">
       <Header />
       <About />
       <Tools />

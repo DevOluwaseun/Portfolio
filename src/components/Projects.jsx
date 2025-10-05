@@ -6,7 +6,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative flex flex-col items-center bg-[#e3e3e3] p-0"
+      className="relative flex snap-start flex-col items-center bg-[#e3e3e3] p-0"
     >
       <div
         className="absolute inset-0 z-0"

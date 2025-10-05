@@ -69,7 +69,7 @@ function Experiences() {
   return (
     <section
       id="experiences"
-      className="font-aeonik relative min-h-screen w-full bg-[#fefcff] py-20 lg:py-40"
+      className="font-aeonik relative w-full snap-start bg-[#fefcff] py-20 lg:py-40"
     >
       <div
         className="absolute inset-0 z-0"
