@@ -11,7 +11,7 @@ function Tools() {
     'Node.js',
     'MongoDB',
     'Tailwind',
-
+    'Docker',
     'express',
     'Git',
     'HTML5',
