@@ -7,12 +7,12 @@
 }
 @font-face {
   font-family: 'Aeonik-Trial';
-  src: url(./resources/font/AeonikTRIAL-Light.otf);
+  src: url(/resources/font/AeonikTRIAL-Light.otf);
   font-weight: 300;
 }
 @font-face {
   font-family: 'Aeonik-Trial';
-  src: url(./font/AeonikTRIAL-Bold.otf);
+  src: url(/resources/font/AeonikTRIAL-Bold.otf);
   font-weight: bold;
 }
 
