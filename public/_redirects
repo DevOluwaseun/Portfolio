@@ -1,0 +1,5 @@
+/* https://devoluwaseun.com/:splat 301!# Force HTTPS
+http://* https://:splat 301!
+
+# Redirect www to non-www
+https://www.devoluwaseun.com/* https://devoluwaseun.com/:splat 301!
