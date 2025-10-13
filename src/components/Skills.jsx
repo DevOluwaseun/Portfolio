@@ -3,14 +3,12 @@ import { motion } from 'framer-motion';
 function Skills({ description, img, skill, index }) {
   return (
     <motion.div
-      className="group border-primary rounded-xl border-b-4 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      key={index}
+      className="rounded-2xl bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.6 }}
-      viewport={{ once: true }}
-      style={{
-        animationDelay: `${index * 100}ms`,
-      }}
+      viewport={{ once: true, margin: '-50px' }}
     >
       <div className="flex items-start gap-4">
         <div className="flex-shrink-0">

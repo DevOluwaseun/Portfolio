@@ -27,11 +27,11 @@ function Header() {
   return (
     <header
       id="home"
-      className="bg-tertiary font-aeonik relative flex snap-start flex-col font-normal lg:h-screen"
+      className="bg-tertiary font-aeonik relative flex h-[75vh] snap-start flex-col font-normal md:min-h-screen"
     >
       <Nav />
 
-      <div className="absolute top-1/2 left-2 z-10 flex -translate-y-1/2 flex-col items-center md:left-10">
+      <div className="absolute top-1/2 left-2 z-10 hidden -translate-y-1/2 flex-col items-center md:left-6 md:flex lg:left-10">
         <svg width="5" height="100%" xmlns="http://www.w3.org/2000/svg">
           <line
             x1="50%"
@@ -43,17 +43,17 @@ function Header() {
           />
         </svg>
 
-        <div className="m-6 flex h-auto w-10 flex-col items-center gap-4">
+        <div className="m-4 flex h-auto w-8 flex-col items-center gap-3 md:m-6 md:w-10 md:gap-4">
           {socialLinks.map((link, i) => (
             <a
               key={i}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 hover:opacity-80 hover:brightness-110 hover:drop-shadow-lg"
+              className="flex h-8 w-8 items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 hover:opacity-80 hover:brightness-110 hover:drop-shadow-lg md:h-10 md:w-10"
             >
               <img
-                className="w-6 sm:w-5 md:w-6 lg:w-7"
+                className="bottom-0 w-6 sm:w-5 md:w-6 lg:w-7"
                 src={link.icons}
                 alt={link.alt}
                 loading="lazy"
@@ -64,25 +64,44 @@ function Header() {
       </div>
 
       <div className="relative flex w-full flex-1 items-center justify-center overflow-hidden">
-        <div className="flex h-full items-center justify-center pl-40 lg:w-[90%]">
-          <div className="relative left-[2rem] flex flex-col gap-2 md:left-[7rem] md:ml-[3rem] lg:left-[9rem] lg:ml-[2rem]">
-            <h1 className="font-aeonik text-primary flex pl-10 text-[6rem] leading-[0.8] font-light md:text-[10rem] lg:text-[18rem]">
+        <div className="flex h-full flex-col items-center justify-center lg:w-[90%] lg:flex-row lg:pl-40">
+          <div className="relative flex flex-col gap-2 py-10 md:py-14 lg:left-[9rem] lg:ml-[2rem]">
+            <h1 className="font-aeonik text-primary flex text-[10rem] leading-[0.8] font-light md:text-[14rem] lg:pl-10 lg:text-[18rem]">
               Hello
             </h1>
-            <p className="font-aeonik text-primary px-4 text-right text-[10px] font-normal whitespace-nowrap md:text-xl md:text-[15px]">
+            <p className="font-aeonik text-primary px-4 text-right text-[16px] font-normal whitespace-nowrap md:text-xl">
               - I'm Oluwaseun a Software Engineer
             </p>
           </div>
 
           <img
-            className="bottom-0 max-h-[100vh] w-full object-contain"
+            className="bottom-0 max-h-[60vh] w-full object-bottom lg:max-h-[100vh]"
             src="resources/images/profile4.png"
             alt="Oluwaseun - Software Engineer"
             loading="eager"
           />
         </div>
       </div>
-      <p className="absolute bottom-10 left-[25%] z-10 hidden animate-bounce md:flex">
+
+      <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-4 sm:hidden">
+        {socialLinks.map((link, i) => (
+          <a
+            key={i}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 ease-in-out hover:scale-110 hover:bg-white/20"
+          >
+            <img
+              className="w-5"
+              src={link.icons}
+              alt={link.alt}
+              loading="lazy"
+            />
+          </a>
+        ))}
+      </div>
+      <p className="absolute bottom-16 left-1/2 z-10 hidden -translate-x-1/2 animate-bounce items-center gap-1 text-xs sm:bottom-10 sm:text-sm md:flex md:text-base lg:left-[25%] lg:translate-x-0">
         Scroll down
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -5,6 +5,8 @@ function Icons({ icon }) {
         className="h-10 w-auto object-contain"
         src={`./resources/images/${icon}.png`}
         alt={`${icon} icon`}
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );

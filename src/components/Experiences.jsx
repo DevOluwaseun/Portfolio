@@ -39,32 +39,6 @@ const skillsObj = [
   },
 ];
 
-// function Experiences() {
-//   return (
-//     <div className="bg-tertiary font-aeonik flex min-h-screen flex-col items-center justify-center py-20 font-light">
-//       <div className="text-primary flex w-30 justify-center rounded-4xl bg-white font-normal">
-//         <p>
-//           {' '}
-//           <span className="text-blue-600">●</span> Experiences
-//         </p>
-//       </div>
-//       <h1 className="text-primary font-aeonik mb-5 pt-5 text-4xl font-normal">
-//         What I Can Do
-//       </h1>
-//       <div className="flex w-[80%] flex-wrap items-center justify-center gap-5">
-//         {skillsObj.map((el, i) => (
-//           <Skills
-//             key={i}
-//             description={el.description}
-//             img={el.img}
-//             skill={el.skill}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
 function Experiences() {
   return (
     <section
